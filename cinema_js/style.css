@@ -64,7 +64,7 @@ main {
 }
 
 .movie {
-  width: 300px;
+  width: 320px;
   margin: 1rem;
   background-color: var(--color-secondary);
   box-shadow: 0 4px 5px rgba(143, 69, 200, 0.2);
@@ -77,7 +77,7 @@ main {
 
 .movie img {
   width: 100%;
-  height: auto;
+  height: 75%;
 }
 
 .movie:hover {
@@ -93,8 +93,12 @@ main {
   letter-spacing: 0.5px;
 }
 
-.movie_info h2 {
+.movie h2 {
   margin-top: 0;
+  font-size: 1.5rem;
+  color: #6f6d6d;
+  padding: 10px;
+
 }
 
 .green {
@@ -115,12 +119,85 @@ main {
   margin-left: 0.5rem;
 }
 
-/* .overview {
-  padding: 2rem;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  line-height: 1.5;
+.movie__button {
   position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: var(--color-primary);
+  padding: 10px;
+  border-radius: 10%;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
 
-} */
+.movie__button:hover {
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.movie__button:focus {
+  outline: none;
+}
+
+.main__card-window {
+  display: flex;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  font-size: 16px;
+  z-index: 999;
+}
+
+.main__window-wrapper {
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  color: var(--color-text);
+  max-width: 800px;
+  position: relative;
+  /* padding: 0 20px; */
+}
+
+.main__window-poster img {
+  width: 360px;
+  height: 540px;
+  border-radius: 20px;
+}
+
+.main__card-name {
+  font-size: 44px;
+  margin-bottom: 10px;
+}
+
+.main__window-parameters {
+  line-height: 1.7;
+  width: 330px;
+  font-size: 16px;
+  margin-bottom: 20px;
+
+}
+
+.main__description {
+  font-size: 16px;
+  text-align: justify;
+  line-height: 1.7;
+  margin-top: 20px;
+  width: 350px;
+}
+
+.main__window-close {
+  position: absolute;
+  top: 20px;
+  right: -30px;
+  cursor: pointer;
+}
+
+.main__window-close:hover {
+  fill: #8f45c8;
+
+}
